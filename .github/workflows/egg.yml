@@ -4,7 +4,12 @@ jobs:
   npm-build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: npm install
-      - run: npm run build
+      - name: get from repository
+        uses: actions/checkout@v4
+
+      - name: install dependency
+        run: npm install
+
+      - name: project package
+        run: npm run build
 
